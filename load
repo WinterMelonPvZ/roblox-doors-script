@@ -1,0 +1,3 @@
+local ver = game:HttpGet("https://github.com/seal18293/roblox-doors-script/version.txt")
+ver=string.gsub(ver,"[.]","-")
+loadstring(game:HttpGet("https://github.com/seal18293/roblox-doors-script/versions/"..ver..".lua"))
