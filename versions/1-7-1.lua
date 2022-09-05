@@ -8,7 +8,7 @@ if workspace:FindFirstChild("Lobby") then
     while wait(69420333) do end
 end
 if not getgenv()["printconsole"] then getgenv()["printconsole"]=print end
-local speedyesno = messagebox("Do you want fast speed?","",4)
+local speedyesno = messagebox("Do you want fast speed? (32)","",4)
 if speedyesno==6 then
     pcall(function()spawn(function()
         while wait() do
@@ -78,7 +78,21 @@ pcall(function()spawn(function()
     repeat wait() until workspace.CurrentRooms["50"]:FindFirstChild("FigureSetup")
     repeat wait() until workspace.CurrentRooms["50"].FigureSetup:FindFirstChild("FigureRagdoll")
     wait(3)
-    workspace.CurrentRooms["50"].FigureSetup:Destroy()
+    
+    local bg = Instance.new("BillboardGui")
+    bg.Size=UDim2.new(1,15,1,15)
+    local text = Instance.new("TextLabel")
+    text.Size=UDim2.new(1,0,1,0)
+    text.BackgroundColor3=Color3.new(1,0,0)
+    text.TextColor3=Color3.new(1,1,1)
+    text.TextStrokeTransparency=0
+    text.Parent=bg
+    text.TextScaled=true
+    bg.AlwaysOnTop=true
+    bg.Parent=workspace.CurrentRooms["50"].FigureSetup.FigureRagdoll:WaitForChild("Torso")
+    while wait() and workspace.CurrentRooms:FindFirstChild("50") and workspace.CurrentRooms["50"] do
+        text.Text=tostring(math.round((game.Players.LocalPlayer.Character.HumanoidRootPart.Position-workspace.CurrentRooms["50"]:WaitForChild("FigureSetup"):WaitForChild("FigureRagdoll").Torso.Position).magnitude))
+    end
 end)end)
 if messagebox and type(messagebox)=="function" then messagebox("doors script v1.06.01 loaded","",0 and 64) end
 printconsole("doors script v1.7 loaded")
