@@ -1,10 +1,12 @@
+local ver = "v1.7.1 (patch 1)"
+
 repeat wait() until game:IsLoaded()
 if (messagebox~=nil and type(messagebox)=="function")~=true then
     game.Players.LocalPlayer:Kick("unsupported exploit")
     while wait(69420333) do end
 end
 if workspace:FindFirstChild("Lobby") then
-    messagebox("dumbass this is the fucking lobby. execute the script in the \"game\" part of the game","",0 and 16)
+    messagebox("dumbass this is the fucking lobby. execute the script in the \"game\" part of the game",ver,0 and 16)
     while wait(69420333) do end
 end
 if not getgenv()["printconsole"] then getgenv()["printconsole"]=print end
@@ -95,4 +97,4 @@ pcall(function()spawn(function()
     end
 end)end)
 if messagebox and type(messagebox)=="function" then messagebox("doors script v1.06.01 loaded","",0 and 64) end
-printconsole("doors script v1.7.1 (patch 1) loaded")
+printconsole("doors script "..ver.." loaded")
