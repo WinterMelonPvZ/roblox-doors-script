@@ -1,7 +1,7 @@
 repeat wait() until game:IsLoaded()
 if workspace:FindFirstChild("Lobby") then
     if messagebox and type(messagebox)=="function" then
-        messagebox("dumbass this is the fucking lobby. execute the script in the \"game\" part of the game","bruh",0 and 16)
+        messagebox("dumbass this is the fucking lobby. execute the script in the \"game\" part of the game","",0 and 16)
         while wait(69420333) do end
     else
         local msg = Instance.new("Message")
