@@ -96,5 +96,5 @@ pcall(function()spawn(function()
         text.Text=tostring(math.round((game.Players.LocalPlayer.Character.HumanoidRootPart.Position-workspace.CurrentRooms["50"]:WaitForChild("FigureSetup"):WaitForChild("FigureRagdoll").Torso.Position).magnitude))
     end
 end)end)
-if messagebox and type(messagebox)=="function" then messagebox("doors script v1.06.01 loaded","",0 and 64) end
+if messagebox and type(messagebox)=="function" then messagebox("doors script "..ver.." loaded",ver,0 and 64) end
 printconsole("doors script "..ver.." loaded")
