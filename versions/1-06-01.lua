@@ -1,12 +1,16 @@
 repeat wait() until game:IsLoaded()
-wait(3)
 if workspace:FindFirstChild("Lobby") then
-    local msg = Instance.new("Message")
-    msg.Parent=workspace
-    msg.Text="dumbass this is the fucking lobby. execute the script in the \"game\" part of the game"
-    wait(5)
-    msg:Destroy()
-    while wait(69420333) do end
+    if messagebox and type(messagebox)=="function" then
+        messagebox("dumbass this is the fucking lobby. execute the script in the \"game\" part of the game","bruh",0 and 16)
+        while wait(69420333) do end
+    else
+        local msg = Instance.new("Message")
+        msg.Parent=workspace
+        msg.Text="dumbass this is the fucking lobby. execute the script in the \"game\" part of the game"
+        wait(5)
+        msg:Destroy()
+        while wait(69420333) do end
+    end
 end
 if not getgenv()["printconsole"] then getgenv()["printconsole"]=print end
 pcall(function()spawn(function()
@@ -85,5 +89,5 @@ pcall(function()spawn(function()
         text.Text=tostring(math.round((game.Players.LocalPlayer.Character.HumanoidRootPart.Position-workspace.CurrentRooms["50"]:WaitForChild("FigureSetup"):WaitForChild("FigureRagdoll").Torso.Position).magnitude))
     end
 end)end)
-if messagebox and type(messagebox)=="function" then messagebox("doors script v1.06.01 loaded") end
+if messagebox and type(messagebox)=="function" then messagebox("doors script v1.06.01 loaded","",0 and 64) end
 printconsole("doors script v1.06.01 loaded")
