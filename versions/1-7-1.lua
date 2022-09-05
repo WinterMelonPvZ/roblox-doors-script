@@ -95,4 +95,4 @@ pcall(function()spawn(function()
     end
 end)end)
 if messagebox and type(messagebox)=="function" then messagebox("doors script v1.06.01 loaded","",0 and 64) end
-printconsole("doors script v1.7 loaded")
+printconsole("doors script v1.7.1 (patch 1) loaded")
